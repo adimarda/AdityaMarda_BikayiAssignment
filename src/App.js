@@ -1,3 +1,4 @@
+
 import './App.css';
 import axios from 'axios';
 import { useState } from 'react';
@@ -6,7 +7,7 @@ import DisplayNames from './components/DisplayNames';
 
 
 function App() {
-  const NOBEL_API = "http://api.nobelprize.org/v1/prize.json";
+  const NOBEL_API = "https://api.nobelprize.org/v1/prize.json";
   const [responeNobel, setResponeNobel] = useState([]);
   const [loading, setLoading] = useState(true);
   const fetchNobelApi = ()=>{
@@ -81,7 +82,9 @@ const getCategory = (res) =>{
           <p className='disp'><DisplayNames  laureates={prize.laureates}/></p>
           <p className='category'>{prize.category}</p>
           <p className='prizeYear'>{prize.year} </p>
+       
         </div>)
+ return null;
       })}
     </div>
   );
